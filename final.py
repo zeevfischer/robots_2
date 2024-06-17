@@ -2,13 +2,26 @@ import cv2
 import numpy as np
 import pandas as pd
 import os
+import shutil
 
 # Define camera parameters
-camera_matrix = np.array([[982.36, 0, 634.88],
-                          [0, 981.23, 356.47],
-                          [0, 0, 1]])
-dist_coeffs = np.array([0.1, -0.25, 0, 0, 0])
+camera_resolution = (1280, 720)  # 720p
+fov = 82.6  # Field of View in degrees
 
+# Calculate the focal length (assuming square pixels)
+focal_length = (camera_resolution[0] / 2) / np.tan(np.deg2rad(fov / 2))
+camera_matrix = np.array([[focal_length, 0, camera_resolution[0] / 2],
+                          [0, focal_length, camera_resolution[1] / 2],
+                          [0, 0, 1]])
+dist_coeffs = np.zeros((4, 1))
+
+# Function to create directories if they do not exist and empty them if they do
+def setup_directories(directories):
+    for directory in directories:
+        if os.path.exists(directory):
+            # Clear the directory
+            shutil.rmtree(directory)
+        os.makedirs(directory)
 
 # Function to calculate distance, yaw, pitch, and roll
 def calculate_3d_info(rvec, tvec):
@@ -23,13 +36,12 @@ def calculate_3d_info(rvec, tvec):
 
     return distance, yaw, pitch, roll
 
-
 # Load the Aruco dictionary
 aruco_dict = cv2.aruco.getPredefinedDictionary(cv2.aruco.DICT_4X4_100)
 parameters = cv2.aruco.DetectorParameters()
 
 # Function to process video
-def process_video(video_path, output_csv, output_video):
+def process_video(video_path, output_csv, output_video, output_frames_dir):
     cap = cv2.VideoCapture(video_path)
 
     # Get the frame rate and size of the video
@@ -82,11 +94,11 @@ def process_video(video_path, output_csv, output_video):
                 pitch = np.degrees(pitch)
                 roll = np.degrees(roll)
 
-                # Debug information
-                print(f"Frame ID: {frame_id}, QR ID: {ids[i][0]}")
-                print(f"Corner Points: {corner_points_list}")
-                print(f"Distance: {distance}")
-                print(f"Yaw (degrees): {yaw}, Pitch (degrees): {pitch}, Roll (degrees): {roll}")
+                # # Debug information
+                # print(f"Frame ID: {frame_id}, QR ID: {ids[i][0]}")
+                # print(f"Corner Points: {corner_points_list}")
+                # print(f"Distance: {distance}")
+                # print(f"Yaw (degrees): {yaw}, Pitch (degrees): {pitch}, Roll (degrees): {roll}")
 
                 # Append data to the output list
                 output_data.append([frame_id, ids[i][0], corner_points_list, distance, yaw, pitch, roll])
@@ -116,10 +128,13 @@ def process_video(video_path, output_csv, output_video):
     df = pd.DataFrame(output_data, columns=columns)
     df.to_csv(output_csv, index=False)
 
-
 # Example usage
 video_path = 'data\\Untitled video - Made with Clipchamp.mp4'
 output_csv = 'output\\output_data.csv'
 output_video = 'output\\vid\\output_video.avi'
 output_frames_dir = 'output\\img'
-process_video(video_path, output_csv, output_video)
+
+# Create and clear directories
+setup_directories([os.path.dirname(output_csv), os.path.dirname(output_video), output_frames_dir])
+
+process_video(video_path, output_csv, output_video, output_frames_dir)
