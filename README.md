@@ -1,43 +1,3 @@
-Skip to content
-Navigation Menu
-zeevfischer
-/
-robots_2
-
-Type / to search
-
-Code
-Issues
-Pull requests
-1
-Actions
-Projects
-Wiki
-Security
-Insights
-Settings
-
-You need to leave a comment indicating the requested changes. 
-Update README.md #1
- Open
-edenmorr wants to merge 1 commit into zeevfischer:main from edenmorr:patch-1  
-+52 −1 
- Conversation 0
- Commits 1
- Checks 0
- Files changed 1
- Open
-Update README.md
-#1
-File filter 
- 
-0 / 1 files viewed
- 53 changes: 52 additions & 1 deletion53  
-README.md
-Viewed
-Original file line number	Diff line number	Diff line change
-@@ -1 +1,52 @@
-# robots_2
 # robots_2
 ### Dron simulation 
 TelloAI V.0.1 - Indoor Autonomous Drone Competition
@@ -89,15 +49,3 @@ This code will process the specified video to detect and track ArUco markers, es
 2. Open a workspace that can run Python code.
 3. Download the repository and insert the main.py file and the maps directory into your Python workspace.
 4. 
-
-Footer
-© 2024 GitHub, Inc.
-Footer navigation
-Terms
-Privacy
-Security
-Status
-Docs
-Contact
-Manage cookies
-Do not share my personal information
