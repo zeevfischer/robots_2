@@ -48,4 +48,3 @@ This code will process the specified video to detect and track ArUco markers, es
 1. for this project we used PyCharm you are encouraged to do the same.
 2. Open a workspace that can run Python code.
 3. Download the repository and insert the main.py file and the maps directory into your Python workspace.
-4. 
