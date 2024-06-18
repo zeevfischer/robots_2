@@ -22,12 +22,12 @@ eden mor: 316160332
 daniel musai: 206684755   
 
 ## Code Explanation
-# calculate_3d_info(rvec, tvec)    
+### calculate_3d_info(rvec, tvec)    
 calculate the distance, yaw, pitch, and roll of the detected marker.    
 Inputs: rvec (rotation vector) and tvec (translation vector).    
 Outputs: Distance to the marker, yaw, pitch, and roll angles.    
 
-## process_video(video_path, output_csv, output_video)   
+### process_video(video_path, output_csv, output_video)   
 Purpose: To process a video to detect ArUco markers, estimate their pose, and save the results.    
 Inputs:   
 video_path: Path to the input video file.    
@@ -45,4 +45,4 @@ This code will process the specified video to detect and track ArUco markers, es
 **video_path is for a specific video wich we used, change the path to fit your video**   
 1. for this project we used PyCharm you are encouraged to do the same.   
 2. Open a workspace that can run Python code.   
-3. Download the repository and insert the main.py file and the maps directory into your Python workspace.   
+3. Download the repository and insert the final.py file and the data , output directorys into your Python workspace.   
