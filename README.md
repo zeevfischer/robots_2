@@ -1,16 +1,16 @@
 # robots_2
 ### Dron simulation 
 TelloAI V.0.1 - Indoor Autonomous Drone Competition
-#Form a Team
+# Form a Team
 Registration Link: Google Form
 
-##Detect QR Codes in a Video
+## Detect QR Codes in a Video
 Objective: Detect and process QR codes in each video frame.
 Output:
 * CSV File: Contains Frame ID, QR ID, 2D corner points, and 3D pose information (distance, yaw, pitch, roll).
 * Video: Mark each detected QR code with a green rectangular frame and its ID.
 
-##Requirements:
+## Requirements:
 Process each frame in real-time (under 30 ms).
 Use Tello's camera parameters: 720p resolution, 82.6 FoV.
 Guidance:
