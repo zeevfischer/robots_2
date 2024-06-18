@@ -1,27 +1,31 @@
 # robots_2
-### Dron simulation 
-TelloAI V.0.1 - Indoor Autonomous Drone Competition
-
-## Detect QR Codes in a Video
-Objective: Detect and process QR codes in each video frame.   
-Output:   
-* CSV File: Contains Frame ID, QR ID, 2D corner points, and 3D pose information (distance, yaw, pitch, roll).
-* Video: Mark each detected QR code with a green rectangular frame and its ID.
-
-## Requirements:
-Process each frame in real-time (under 30 ms).   
-Use Tello's camera parameters: 720p resolution, 82.6 FoV.   
-Guidance:   
-Start with the provided Qualification Challenge.   
-Example video from Class 7 (9/6/2024).   
-Test on the provided video file: TelloAIv0.0_video.    
-[Assiment link](https://docs.google.com/document/d/1eo34T_M7jfduRZm_oevy94YY2LkGLzRT/edit#heading=h.2g3tsmea07xv)
 ## authorers
 zeev fischer: 318960242   
 eden mor: 316160332   
 daniel musai: 206684755   
 
-## Code Explanation
+### Image / Video processing
+TelloAI V.0.1 - Indoor Autonomous Drone Competition
+[Assiment link](https://docs.google.com/document/d/1eo34T_M7jfduRZm_oevy94YY2LkGLzRT/edit#heading=h.2g3tsmea07xv)
+
+This is the main Image / Video processing challenge; given a video detect on it the QR, more formally on avery frame of the video if there is 1 (or more QR) write down the following parameters: 
+* The QR’s id (number between 0 and 1023),    
+* The QR’s 2D info - the 4 corner points (in frame coordinates).   
+* The QR’s 3D info: the Distance to the camera, the yaw angle with respect to the camera “lookAt” point.   
+
+## Code Explanation 
+Objective: Detect and process QR codes in each video frame.   
+Output:   
+* CSV File: Contains Frame ID, QR ID, 2D corner points, and 3D pose information (distance, yaw, pitch, roll).
+* Video: Mark each detected QR code with a green rectangular frame and its ID.
+
+Requirements:   
+Process each frame in real-time (under 30 ms).   
+Use Tello's camera parameters: 720p resolution, 82.6 FoV.   
+Guidance:   
+Start with the provided [Qualification Challenge](https://github.com/AlonBarak-dev/Tello-Semi-Autonomous/tree/main/Qualification%20Stage).   
+[Test on the provided video file:](https://drive.google.com/file/d/12WWf1ITyXHhnpMvbOSkmvfr6E8NsvsU1/view)
+
 ### calculate_3d_info(rvec, tvec)    
 calculate the distance, yaw, pitch, and roll of the detected marker.    
 Inputs: rvec (rotation vector) and tvec (translation vector).    
