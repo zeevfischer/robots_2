@@ -15,7 +15,7 @@ Guidance:
 Start with the provided Qualification Challenge.   
 Example video from Class 7 (9/6/2024).   
 Test on the provided video file: TelloAIv0.0_video.    
-[Assiment link]([https://docs.google.com/document/d/1eo34T_M7jfduRZm_oevy94YY2LkGLzRT/edit#heading=h.2g3tsmea07xv](https://docs.google.com/document/d/1CrMkXjp3Wmv8V35kfcw4X57aUSpF0xhfB9gIySmhaxw/edit))   
+[Assiment link](https://docs.google.com/document/d/1eo34T_M7jfduRZm_oevy94YY2LkGLzRT/edit#heading=h.2g3tsmea07xv)
 ## authorers
 zeev fischer: 318960242   
 eden mor: 316160332   
