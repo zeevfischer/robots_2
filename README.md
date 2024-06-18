@@ -26,12 +26,12 @@ Guidance:
 Start with the provided [Qualification Challenge](https://github.com/AlonBarak-dev/Tello-Semi-Autonomous/tree/main/Qualification%20Stage).   
 [Test on the provided video file:](https://drive.google.com/file/d/12WWf1ITyXHhnpMvbOSkmvfr6E8NsvsU1/view)
 
-### calculate_3d_info(rvec, tvec)    
+### Function: calculate_3d_info(rvec, tvec)    
 calculate the distance, yaw, pitch, and roll of the detected marker.    
 Inputs: rvec (rotation vector) and tvec (translation vector).    
 Outputs: Distance to the marker, yaw, pitch, and roll angles.    
 
-### process_video(video_path, output_csv, output_video)   
+### Function: process_video(video_path, output_csv, output_video)   
 Purpose: To process a video to detect ArUco markers, estimate their pose, and save the results.    
 Inputs:   
 video_path: Path to the input video file.    
