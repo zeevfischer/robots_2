@@ -6,7 +6,7 @@ daniel musai: 206684755
 
 ### Image / Video processing
 TelloAI V.0.1 - Indoor Autonomous Drone Competition
-[Assiment link](https://docs.google.com/document/d/1eo34T_M7jfduRZm_oevy94YY2LkGLzRT/edit#heading=h.2g3tsmea07xv)
+[Assiment link](https://docs.google.com/document/d/1CrMkXjp3Wmv8V35kfcw4X57aUSpF0xhfB9gIySmhaxw/edit)
 
 This is the main Image / Video processing challenge; given a video detect on it the QR, more formally on avery frame of the video if there is 1 (or more QR) write down the following parameters: 
 * The QR’s id (number between 0 and 1023),    
