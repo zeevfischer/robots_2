@@ -47,6 +47,7 @@ This code will process the specified video to detect and track ArUco markers, es
 ## How To Run   
 **Noat**: Basic understanding of running code is required. There are special downloads needed; creat output and data files, keep in mind that some workspaces may differ from others.**   
 **Noat**: in final.py video_path is for a specific video wich we used, change the path to fit your video if needed.  
+**Note**: if you are having problems with cv2 use "pip install opencv-contrib-python"
 1. for this project we used PyCharm you are encouraged to do the same.   
 2. Open a workspace that can run Python code.   
 3. Download the repository and insert the final.py file and the data , output directorys into your Python workspace.
